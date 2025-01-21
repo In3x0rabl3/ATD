@@ -2,6 +2,9 @@
 
 ### Attemping to training myself and others on AI / LLM vulnerabilities. Be caution where you spin this application, I'm not at fault if you start hosting this on your Server lol... This is my first real attempt using Go to create a working application so please don't be brutal.
 
+
+![basic](https://github.com/user-attachments/assets/36a36ce7-99df-41d4-a1c1-b8b9e571a841)
+
 ## **Overview**
 
 This project showcases four key modules demonstrating common security vulnerabilities and adversarial attack techniques:

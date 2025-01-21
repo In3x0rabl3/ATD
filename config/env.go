@@ -5,14 +5,6 @@ import (
 	"os"
 )
 
-// VMConfig holds the Virtual Machine configuration details
-type VMConfig struct {
-	Name            string
-	Username        string
-	Password        string
-	SandboxUsername string
-	SandBoxPassword string
-}
 
 // GetEnv fetches an environment variable or returns a default value
 func GetEnv(key, defaultValue string) string {

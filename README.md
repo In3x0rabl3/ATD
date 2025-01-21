@@ -17,6 +17,45 @@ The project runs on a Go-based backend with SSL enabled for secure communication
 
 ---
 
+## Modules
+
+### **1. Prompt Injection**
+
+- **Objective**: Exploit an AI model by crafting malicious prompts to manipulate responses and extract sensitive information.
+- **Key Features**:
+  - Enables interaction with the AI using crafted prompts.
+  - Demonstrates how adversarial prompts can bypass intended restrictions.
+
+
+---
+
+### **2. Data Leakage**
+
+- **Objective**: Upload a malicious image containing SQL commands to expose sensitive database details.
+- **Key Features**:
+  - Processes uploaded files without proper validation, leading to SQL injection.
+  - Demonstrates the exposure of database structures and potentially sensitive information.
+
+---
+
+### **3. Data Poisoning**
+
+- **Objective**: Corrupt the baseline dataset by injecting malicious data to alter the AI model's behavior.
+- **Key Features**:
+  - Accepts CSV uploads to simulate data poisoning.
+  - Shows the impact of poisoned datasets on model predictions and integrity.
+  - 
+---
+
+### **4. Supply Chain Attacks**
+
+- **Objective**: Demonstrate the risks of compromised machine learning models.
+- **Key Features**:
+  - Allows uploading of a backdoored model file (`malicious_chatbot.pth`).
+  - Simulates interaction with the compromised model to highlight adversarial behavior.
+
+---
+
 ## **Setup Instructions**
 
 ### **Prerequisites**
@@ -54,5 +93,6 @@ The project runs on a Go-based backend with SSL enabled for secure communication
    go mod tidy
    go run main.go
    
+2. **Enjoy**:   
 ```bash
 https://127.0.0.1:8443

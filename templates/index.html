@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <div id="instructions" class="instructions">
+            Select a module to view specific instructions.
+        </div>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="model">Select Vulnerable Module:</label>
+                <select id="model" name="model">
+                    <option value="" disabled {{ if not .SelectedModel }}selected{{ end }}>Select a module</option>
+                    {{ range .Models }}
+                    <option value="{{ . }}" {{ if eq . $.SelectedModel }}selected{{ end }}>{{ . }}</option>
+                    {{ end }}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="prompt">Enter query:</label>
+                <textarea id="prompt" name="prompt"></textarea>
+            </div>
+            <div id="download-model" class="vm-controls hidden">
+                <button type="button" data-action="download-mod">Download Model</button>
+            </div>
+            <div id="reset-controls" class="vm-controls hidden">
+                <button type="button" data-action="reset-baseline">Reset Baseline Dataset</button>
+                <div class="score-boxes">
+                    <div id="Intergrity" class="score-box">Intergrity: 1.00</div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div id="upload-image" class="upload-section hidden">
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" name="file" accept="image/*">
+                </div>
+                <div id="upload-file" class="upload-section hidden">
+                    <label for="file">Upload File:</label>
+                    <input type="file" id="file" name="file" accept=".csv">
+                </div>
+                <div id="upload-model" class="upload-section hidden">
+                    <label for="file">Upload Model:</label>
+                    <input type="file" id="modell" name="modell" accept=".pth">
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="response-box" class="response">
+            <strong>Response:</strong>
+            <p id="response-content">No response yet.</p>
+        </div>
+    </div>
+
+    <!-- Flag Submission Box -->
+    <div id="flag-box" class="flag-box">
+        <h2>Submit Flag</h2>
+        <label for="module-select">Select Module:</label>
+        <select id="module-select">
+            <option value="module1">Prompt Injection</option>
+            <option value="module2">Data Leakage</option>
+            <option value="module4">Data Poisoning</option>
+            <option value="module5">Supply Chain</option>
+        </select>
+        <label for="flag-input">Enter Flag:</label>
+        <input type="text" id="flag-input" placeholder="ME{example_flag}" />
+        <button id="flag-submit-btn">Submit Flag</button>
+        <div id="flag-response" class="response"></div>
+    </div>
+
+
+    <!-- Modularized JavaScript Files -->
+    <script type="module" src="/assets/js/ui.js"></script>
+    <script type="module" src="/assets/js/form.js"></script>
+    <script type="module" src="/assets/js/reset.js"></script>
+    <script type="module" src="/assets/js/score.js"></script>
+    <script type="module" src="/assets/js/supply.js"></script>
+    <script type="module" src="/assets/js/flag.js"></script>
+</body>
+</html>

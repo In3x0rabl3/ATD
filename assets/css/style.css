@@ -1,0 +1,330 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d; /* Dark Gray Background */
+    color: #f5f5f5; /* Light Text Color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 20px auto; /* Centered with moderate spacing above and below */
+    padding: 20px;
+    background-color: #3d3d3d; /* Slightly Lighter Gray Background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*Supply Term */
+.supply-chain-terminal-container {
+    margin: 20px 0;
+    background-color: #000; /* Terminal background */
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.terminal {
+    width: 100%;
+    height: 400px; /* Adjustable height */
+    font-family: monospace;
+}
+
+
+/* Section Styling */
+.instructions, .response {
+    margin-bottom: 15px; /* Reduced spacing between sections */
+    padding: 15px;
+    background-color: #4a4a4a; /* Medium Gray Background for Sections */
+    border-radius: 8px;
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Form Elements */
+textarea, select, input[type="submit"], input[type="file"] {
+    width: 100%;
+    margin-top: 10px; /* Moderate spacing between elements */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Adjusted Spacing for Dropdown and Textarea */
+.form-group label {
+    margin-bottom: 8px; /* Space between label and input field */
+    display: block;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 260px; /* Slightly larger text box */
+    background-color: #2b2b2b; /* Dark Gray Textarea Background */
+    color: #f5f5f5; /* Light Text Color */
+    line-height: 1.5; /* Improved line spacing for readability */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Select Dropdown Styling */
+select {
+    background-color: #2b2b2b; /* Dark Gray Dropdown Background */
+    color: #f5f5f5; /* Light Text Color */
+    padding: 10px; /* Improved padding for dropdown */
+    margin-bottom: 12px; /* Add spacing below the dropdown */
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background-color: #4caf50; /* Green Background for Submit Button */
+    color: white; /* White Text */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px; /* Slightly larger padding */
+    margin: 15px 0; /* Moderate spacing above and below the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker Green on Hover */
+}
+
+/* Button Styling */
+button {
+    margin: 10px 0; /* Adjusted spacing for buttons */
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #4a90e2; /* Blue Button Background */
+    color: white; /* White Text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ab7; /* Darker Blue on Hover */
+}
+
+/* VM Controls */
+.vm-controls {
+    display: flex;
+    gap: 10px; /* Moderate spacing between VM buttons */
+    justify-content: flex-start;
+    margin-bottom: 10px; /* Add spacing below VM controls */
+}
+
+/* Upload Sections */
+.upload-section {
+    flex: 1;
+    background-color: #4a4a4a; /* Medium Gray Background for Upload Sections */
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Moderate spacing below upload sections */
+}
+
+.upload-section label {
+    display: block;
+    margin-bottom: 8px; /* Moderate spacing below labels */
+    font-weight: bold;
+    color: #fff; /* White Label Text */
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px; /* Moderate padding for file inputs */
+    background-color: #2b2b2b; /* Dark Gray File Input Background */
+    color: #f5f5f5; /* Light Text Color */
+    border: 1px solid #444; /* Subtle Border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Score Boxes */
+.score-boxes {
+    display: flex;
+    gap: 10px; /* Moderate spacing between score boxes */
+    margin-left: 10px;
+    align-items: center;
+}
+
+.score-box {
+    padding: 10px; /* Moderate padding inside score boxes */
+    background-color: #4a4a4a; /* Medium Gray Background for Score Boxes */
+    color: #f5f5f5; /* Light Text Color */
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 120px; /* Adjusted minimum width */
+}
+
+/* Flag Box Styles */
+.flag-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px; /* Width of the box */
+    height: 300px; /* Set the height as per your preference */
+    padding: 15px;
+    background-color: #1e1e1e; /* Background color */
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    z-index: 1000; /* Ensure it's on top */
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+
+.flag-box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.flag-box label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.flag-box input {
+    width: calc(100% - 20px);
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.flag-box button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #45a049;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.flag-box button:hover {
+    background-color: #0056b3;
+}
+
+.flag-box .response {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ff5f5f; /* Error/feedback color */
+    text-align: center;
+}
+
+/* Success State */
+.response.success {
+    color: rgb(100, 209, 100); /* Green for success messages */
+}
+
+/* Error State */
+.response.error {
+    color: rgb(230, 83, 83); /* Red for error messages */
+}
+
+/* VM Control Box Styles */
+.vm-control-box {
+    position: absolute;
+    top: 350px; /* Adjust to appear below flag-box */
+    right: 20px;
+    width: 300px;
+    height: auto;
+    max-height: 200px; /* Adjust height for compact size */
+    padding: 15px;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.vm-control-box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.vm-control-box button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.vm-control-box button:hover {
+    background-color: #45a049;
+}
+
+/* Status Section */
+.vm-control-box .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.vm-control-box .status span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Status Indicator */
+.vm-control-box .status .vm-status-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #444;
+}
+
+.vm-control-box .status .vm-status-indicator.running {
+    background-color: rgb(100, 209, 100); /* Running status */
+}
+
+.vm-control-box .status .vm-status-indicator.not-running {
+    background-color: rgb(230, 83, 83); /* Not running status */
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 13px; /* Slightly smaller font size for buttons on smaller screens */
+        padding: 6px 10px;
+    }
+
+    textarea, select, input[type="submit"], input[type="file"] {
+        font-size: 14px;
+    }
+
+    .score-box {
+        font-size: 12px;
+        padding: 8px;
+        min-width: 100px;
+    }
+}

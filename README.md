@@ -1,6 +1,6 @@
 # Attack, Train, Defend
 
-### Modular approach using the openai API to Training myself and others on AI / LLM vulnerabilities. 
+### A Modular approach using the openai API to Training myself and others on AI / LLM vulnerabilities. 
 Be caution where you delpoy this application, it's **Vulnerable**  lol... *Go is my best friend*
 
 

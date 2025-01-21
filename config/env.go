@@ -34,5 +34,5 @@ func GetOpenAIKey() string {
 }
 
 func GetSensitiveDatasetPath() string {
-	return GetEnv("BASELINE_DATASET", "./data/sensitive_data.db")
+	return GetEnv("BASELINE_DATASET", "./data/database/sensitive_data.db")
 }
